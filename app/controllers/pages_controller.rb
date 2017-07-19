@@ -8,7 +8,7 @@ before_action :set_kitten_url, only: [:kitten, :kittens]
 
   def contest
     flash[:notice] = "Sorry, the contest has ended"
-    redirect_to "/welcome"
+    redirect_to welcome
     @header = "This is the Contest page"
   end
 
@@ -33,7 +33,7 @@ before_action :set_kitten_url, only: [:kitten, :kittens]
   def secrets
     if params[:magic_word] != 'magic'
       flash[:alert] = "Sorry, you're not authorized to see that page!"
-      redirect_to "/welcome"
+      redirect_to kitten_path(400)
     end
 
   end
