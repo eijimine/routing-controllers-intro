@@ -9,5 +9,6 @@ Rails.application.routes.draw do
 
   get '/welcome' => 'pages#welcome'
 
+  get '/kitten/:size' => 'pages#kitten'
 
 end

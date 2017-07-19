@@ -13,4 +13,10 @@ class PagesController < ApplicationController
     # render :about
   end
 
+  def kitten
+    @header = "This is the Welcome page"
+    requested_size = params[:size]
+    @kitten_url = "http://lorempixel.com/#{requested_size}/#{requested_size}/cats"
+  end
+
 end
