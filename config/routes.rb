@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get '/' => 'pages#welcome'
 
+  get '/contest' => 'pages#contest'
+
   get '/about' => 'pages#about'
 
   get '/welcome' => 'pages#welcome'
